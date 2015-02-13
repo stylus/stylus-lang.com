@@ -102,6 +102,7 @@ body {
 .sidebar nav {
   font-family: 'Unica One', sans-serif;
   text-transform: uppercase;
+  margin-bottom: 2rem;
 }
 .sidebar nav a {
   display: block;
@@ -178,4 +179,11 @@ ol {
   text-decoration: none;
   margin-left: 5px;
   font-size: 20px;
+}
+@media (min-width: 800px) {
+  .sidebar .credit {
+    display: block;
+    width: 120px;
+    margin: auto;
+  }
 }

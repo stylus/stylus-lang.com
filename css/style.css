@@ -80,6 +80,7 @@ body {
           flex: 1;
   border-bottom: 1px solid #eee;
   text-align: center;
+  padding-bottom: 0.5em;
 }
 @media (min-width: 800px) {
   .sidebar {
@@ -184,6 +185,6 @@ ol {
   .sidebar .credit {
     display: block;
     width: 120px;
-    margin: auto;
+    margin: auto auto 1.5rem;
   }
 }

@@ -1,0 +1,22 @@
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "default"
+
+kramdown:
+  input: GFM

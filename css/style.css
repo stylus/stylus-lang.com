@@ -93,6 +93,7 @@ body {
 .sidebar img {
   width: 100px;
   display: inline-block;
+  vertical-align: middle;
   margin-bottom: 1rem;
 }
 @media (min-width: 800px) {
@@ -118,6 +119,12 @@ body {
 }
 .sidebar nav a:first-child {
   border-top: 1px solid #ff4726;
+}
+.sidebar p {
+  font-size: 1.1em;
+}
+.sidebar p a {
+  color: #fff;
 }
 .content {
   -webkit-box-flex: 2;

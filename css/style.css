@@ -122,6 +122,7 @@ body {
 }
 .sidebar p {
   font-size: 1.1em;
+  color: rgba(255,255,255,0.5);
 }
 .sidebar p a {
   color: #fff;
@@ -188,10 +189,22 @@ ol {
   margin-left: 5px;
   font-size: 20px;
 }
+.created > a {
+  margin: auto auto 1.5em;
+  width: 120px;
+  display: block;
+}
+.supported a {
+  margin: 1.5rem auto;
+  width: 120px;
+  display: block;
+}
+.supported img.credit {
+  margin-bottom: 0;
+}
 @media (min-width: 800px) {
   .sidebar .credit {
     display: block;
-    width: 120px;
-    margin: auto auto 1.5rem;
+    margin: auto auto;
   }
 }

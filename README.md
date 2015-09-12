@@ -1,4 +1,6 @@
-# Stylus
+# Stylus [![Build Status][build]][build-link]
+[build]: https://travis-ci.org/stylus/stylus-lang.com.png?branch=master
+[build-link]: https://travis-ci.org/stylus/stylus-lang.com
 
 This is a branch for the code running Stylus' site. It does not contain the docs, they're taken from the `dev` branch using the git submodule.
 

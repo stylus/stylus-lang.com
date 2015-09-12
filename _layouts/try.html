@@ -6,18 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="{{ root_url }}s/style.css" />
-    <!--[if lt IE 9]><script src="{{ root_url }}js/vendor/selectivizr-1.0.2.min.js"></script><![endif]-->
-    <script src="{{ root_url }}js/vendor/modernizr-2.8.2.min.js"></script>
-    <script src="{{ root_url }}js/vendor/respond.js-1.4.2.min.js"></script>
-
-    {% if page.page_type_class == 'try' %}
-        <link rel="stylesheet" href="{{ root_url }}s/codemirror.css"/>
-        <script src="{{ root_url }}try/jquery.js"></script>
-        <script src="{{ root_url }}try/stylus.min.js"></script>
-        <script src="{{ root_url }}try/codemirror.js"></script>
-        <script src="{{ root_url }}try/css-mode.js"></script>
-        <script src="{{ root_url }}try/try.js"></script>
-    {% endif %}
+    <link rel="stylesheet" href="{{ root_url }}s/try.css"/>
+    <link rel="stylesheet" href="{{ root_url }}s/codemirror.css"/>
+    <!--[if lt IE 9]><script src="js/vendor/selectivizr-1.0.2.min.js"></script><![endif]-->
+    <script src="js/vendor/modernizr-2.8.2.min.js"></script>
+    <script src="js/vendor/respond.js-1.4.2.min.js"></script>
+    <script src="try/jquery.js"></script>
+    <script src="try/stylus.min.js"></script>
+    <script src="try/codemirror.js"></script>
+    <script src="try/css-mode.js"></script>
+    <script src="try/try.js"></script>
 
     <title>{{ title }} — {% if is_index %}expressive, robust, feature-rich CSS preprocessor{% else %}Stylus{% endif %}</title>
 </head>
@@ -32,10 +30,7 @@
     <div class="wrap">
         <aside class="sidebar">
             <nav>
-                {% if page.page_type_class == 'try' %}<strong>{% else %}<a href="{{ root_url }}try.html">{% endif %}
-                    Try Stylus Online!
-                {% if page.page_type_class == 'try' %}</strong>{% else %}</a>{% endif %}
-
+                <a href="{{ root_url }}try.html">Try Stylus Online!</a>
                 {% capture menu_cache %}
                     {% assign menu_result = '' %}
                     {% assign current_post_name = page.url | remove:'index.html' %}
@@ -83,11 +78,8 @@
             </header>
 
             <div class="docs">
-                {% if page.page_type_class != 'try' %}<h1>{{ title }}</h1>{% endif %}
+                <h1>{{ title }}</h1>
                 {{ processed_content }}
-
-                {{ partials }}
-
             </div>
 
             <a href="https://github.com/stylus/stylus/" class="meow">
@@ -98,13 +90,13 @@
 
     <!--[if lt IE 9]>
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="{{ root_url }}js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <![endif]-->
     <!--[if gt IE 8]><!-->
       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script>window.jQuery || document.write('<script src="{{ root_url }}js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
+      <script>window.jQuery || document.write('<script src="js/vendor/jquery-2.1.1.min.js"><\/script>')</script>
     <!--<![endif]-->
-    <script src="{{ root_url }}js/plugins.js"></script>
+    <script src="js/plugins.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

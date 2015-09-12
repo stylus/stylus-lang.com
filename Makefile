@@ -1,11 +1,7 @@
 all: deps build
 
 build:
-	./node_modules/stylus/bin/stylus s/style.styl && \
-	./node_modules/stylus/bin/stylus s/style.ie.styl
-
-try:
-	./node_modules/stylus/bin/stylus s/try.styl
+	./node_modules/stylus/bin/stylus s/style.styl
 
 serve:
 	jekyll serve --watch --config _config.yml,_config-dev.yml
@@ -15,4 +11,4 @@ deps:
 	bundle check || bundle install
 	npm install
 
-.PHONY: all build try serve deps
+.PHONY: all build serve deps

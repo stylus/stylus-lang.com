@@ -6,9 +6,7 @@ permalink: /
 
 ---
 
-# Stylus
-
-<div class="example" markdown="1">
+# Expressive, dynamic, robust CSS
 
 ## CSS needs a hero
 
@@ -21,10 +19,8 @@ permalink: /
       border-radius: 5px;
     }
 
-</div>
-<div class="example" markdown="1">
 
-## What if we could omit braces?
+### What if we could omit braces?
 
     body
       font: 12px Helvetica, Arial, sans-serif;
@@ -34,10 +30,8 @@ permalink: /
       -moz-border-radius: 5px;
       border-radius: 5px;
 
-</div>
-<div class="example" markdown="1">
 
-## How about semi-colons?
+### How about semi-colons?
 
     body
       font: 12px Helvetica, Arial, sans-serif
@@ -46,68 +40,48 @@ permalink: /
       -webkit-border-radius: 5px
       -moz-border-radius: 5px
       border-radius: 5px
-</div>
-<div class="example" markdown="1">
 
-## Why stop there, drop the colons
 
-    body
-      font 12px Helvetica, Arial, sans-serif
-    
-    a.button
-      -webkit-border-radius 5px
-      -moz-border-radius 5px
-      border-radius 5px
-
-</div>
-<div class="example" markdown="1">
-
-## Keep things DRY
+### Keep things DRY
 
     border-radius()
-      -webkit-border-radius arguments
-      -moz-border-radius arguments
-      border-radius arguments
+      -webkit-border-radius: arguments
+      -moz-border-radius: arguments
+      border-radius: arguments
     
     body
-      font 12px Helvetica, Arial, sans-serif
+      font: 12px Helvetica, Arial, sans-serif
     
     a.button
       border-radius(5px)
 
-</div>
-<div class="example" markdown="1">
 
-## How about transparent mixins?
+### How about transparent mixins?
 
     border-radius()
-      -webkit-border-radius arguments
-      -moz-border-radius arguments
-      border-radius arguments
+      -webkit-border-radius: arguments
+      -moz-border-radius: arguments
+      border-radius: arguments
     
     body
-      font 12px Helvetica, Arial, sans-serif
+      font: 12px Helvetica, Arial, sans-serif
     
     a.button
-      border-radius 5px
+      border-radius: 5px
 
-</div>
-<div class="example" markdown="1">
 
-## Create &amp; Share
+### Create & Share
 
     @import 'vendor'
     
     body
-      font 12px Helvetica, Arial, sans-serif
+      font: 12px Helvetica, Arial, sans-serif
     
     a.button
-      border-radius 5px
+      border-radius: 5px
 
-</div>
-<div class="example" markdown="1">
 
-## Even in-language functions!
+### Even in-language functions!
 
     sum(nums...)
       sum = 0
@@ -116,10 +90,8 @@ permalink: /
     sum(1 2 3 4)
     // => 10
 
-</div>
-<div class="example" markdown="1">
 
-## What if it were all optional?
+### What if it were all optional?
 
     fonts = helvetica, arial, sans-serif
     
@@ -128,10 +100,8 @@ permalink: /
       font: 14px/1.4 fonts;
     }
 
-</div>
-<div class="example closing" markdown="1">
 
-## Get styling with Stylus
+### Get styling with Stylus
 
 Installing Stylus is very easy once you have [Node.js](http://nodejs.org/).
 So get the binaries for your platform and make sure that they also include npm, Node's package manager.
@@ -146,7 +116,6 @@ features or the features listed below, head over to 
 [GitHub](http://github.com/stylus/stylus)
 for more information.
 
-<div class="features" markdown="1">
 
 ### Features
 
@@ -177,6 +146,3 @@ for more information.
 - Character escaping
 - TextMate bundle
 - and more!
-
-</div>
-</div>

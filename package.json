@@ -8,11 +8,11 @@
   "licence": "MIT",
 
   "description": "Engine for running Stylus GitHub pages.",
-  "homepage": "http://learnboost.github.io/stylus/",
-  "bugs": { "url": "https://github.com/stylus/stylus/issues?labels=s%3A+Docs" },
+  "homepage": "http://stylus-lang.com/",
+  "bugs": { "url": "https://github.com/stylus/stylus-lang.com/issues" },
 
   "dependencies": {
-    "stylus": "~0.52.4"
+    "stylus": "~0.53.0"
   },
 
   "engines": { "node": ">=0.6" }

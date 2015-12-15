@@ -34,6 +34,7 @@ h6 {
 h1 {
   font-family: 'Unica One', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
   color: #aaa;
 }
 p {
@@ -87,6 +88,7 @@ body {
 .sidebar nav {
   font-family: 'Unica One', sans-serif;
   text-transform: uppercase;
+  letter-spacing: 1px;
   margin-bottom: 2rem;
 }
 .sidebar nav > a,

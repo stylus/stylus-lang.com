@@ -3,7 +3,7 @@ var i = 0
   , stylusEditor
   , cssEditor;
 
-function next() {
+function next(overrideCode) {
   var tryme = $('#try')
     , steps = $('.step')
     , lastStep = steps.length - 1
@@ -45,6 +45,7 @@ function next() {
     }
 
     var str = stylusEditor.getValue().trim();
+    setHash({code: str});
     stylus(str)
       .render(function(err, str){
         if (err) return;
@@ -59,7 +60,7 @@ function next() {
 
   tryme.find('h2').text(step.find('h2').text());
   tryme.find('p:first').text(step.find('p:first').text());
-  stylusEditor.setValue(step.find('.stylus').val().trim());
+  stylusEditor.setValue(overrideCode || step.find('.stylus').val().trim());
 
   render();
   return false;
@@ -71,8 +72,50 @@ function prev() {
   return false;
 }
 
+// The last URL hash that was set via setHash.
+var lastHash;
+
+function onHashChange() {
+  // Ignore hash changes that we did ourselves.
+  if(location.hash === lastHash) return;
+  var hashValues = parseHash();
+  if(hashValues && hashValues.code) {
+    stylusEditor.setValue(hashValues.code);
+  }
+}
+
+// Parse the URL hash into an object.
+// Requires hash to be in query-param format (`?key=value&key2=value2`)
+function parseHash() {
+  var hash = location.hash.replace(/^#/, '');
+  if(!/^\?([^=&?]+=[^=&?]*(&|$))*/.test(hash)) return null;
+  var ret = {};
+  hash.replace(/(?:\?)([^=&?]+)=([^=&?]*)(?:&|$)/g, function(all, key, value) {
+    ret[decodeURIComponent(key)] = decodeURIComponent(value);
+  });
+  return ret;
+}
+
+// Set the URL hash based on an object of query params
+function setHash(props) {
+  var hash = '?' + $.map(props, function(v, k) {
+        return encodeURIComponent(k) + '=' + encodeURIComponent(v);
+      }).join('&');
+  if(history.replaceState && location.protocol !== 'file:') {
+    // Avoid creating a new history entry.
+    history.replaceState(null, null, '#' + hash);
+  } else {
+    location.hash = hash;
+  }
+  // Remember this hash so we can ignore the corresponding hashchange event.
+  lastHash = location.hash;
+}
+
 $(function(){
-  $('#next').click(next);
+  $('#next').click(function() { next(); });
   $('#prev').click(prev);
-  next();
+  var hashValues = parseHash();
+  var overrideCode = hashValues && hashValues.code || undefined;
+  next(overrideCode);
+  $(window).on('hashchange', onHashChange);
 });

@@ -34,12 +34,12 @@ permalink: /
 ### How about semi-colons?
 
     body
-      font: 12px Helvetica, Arial, sans-serif
+      font 12px Helvetica, Arial, sans-serif
     
     a.button
-      -webkit-border-radius: 5px
-      -moz-border-radius: 5px
-      border-radius: 5px
+      -webkit-border-radius 5px
+      -moz-border-radius 5px
+      border-radius 5px
 
 
 ### Keep things DRY

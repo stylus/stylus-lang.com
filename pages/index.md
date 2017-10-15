@@ -93,7 +93,7 @@ permalink: /
 
 ### What if it were all optional?
 
-    fonts = helvetica, arial, sans-serif
+    fonts = Helvetica, Arial, sans-serif
     
     body {
       padding: 50px;

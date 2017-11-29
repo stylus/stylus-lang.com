@@ -1,19 +1,14 @@
 {
   "private": true,
-
   "name": "stylus-gh-pages",
-  "version": "0.0.0",
-
   "author": "Roman Komarov <kizmarh@ya.ru> (http://kizu.ru/en/)",
-  "licence": "MIT",
-
+  "license": "MIT",
   "description": "Engine for running Stylus GitHub pages.",
   "homepage": "http://stylus-lang.com/",
-  "bugs": { "url": "https://github.com/stylus/stylus-lang.com/issues" },
-
-  "dependencies": {
-    "stylus": "~0.53.0"
+  "bugs": {
+    "url": "https://github.com/stylus/stylus-lang.com/issues"
   },
-
-  "engines": { "node": ">=0.6" }
+  "devDependencies": {
+    "stylus": "^0.54.5"
+  }
 }

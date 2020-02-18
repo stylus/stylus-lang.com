@@ -27,3 +27,7 @@ $ make serve
 ```
 
 Open [http://0.0.0.0:4000](http://0.0.0.0:4000) in your web browser.
+
+## Thanks
+
+Big thanks to [Nathan Vander Wilt](https://github.com/natevw) for sponsoring the domain costs. 🎉

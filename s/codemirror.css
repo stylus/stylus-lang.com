@@ -86,6 +86,19 @@
   padding-right: 110px;
 }
 
+.stylus + .CodeMirror {
+  cursor: text;
+  border: 1px solid lightgrey;
+}
+
+.stylus + .CodeMirror:hover {
+  border-color: grey;
+}
+
+.css + .CodeMirror {
+  background: #ececec;
+}
+
 .CodeMirror {
   float: left;
 
@@ -119,7 +132,6 @@
   display: none;
 }
 .CodeMirror-lines {
-  background: white;
   padding: 20px;
 }
 

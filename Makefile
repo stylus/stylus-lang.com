@@ -1,7 +1,7 @@
 all: deps build
 
 build:
-	./node_modules/stylus/bin/stylus s/style.styl
+	./node_modules/stylus/bin/stylus -w s/style.styl -o s/style.css
 
 serve:
 	jekyll serve --watch --config _config.yml,_config-dev.yml

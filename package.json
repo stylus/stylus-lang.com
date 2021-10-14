@@ -12,7 +12,7 @@
   "bugs": { "url": "https://github.com/stylus/stylus-lang.com/issues" },
 
   "dependencies": {
-    "stylus": "~0.53.0"
+    "stylus": "^0.55.0"
   },
 
   "engines": { "node": ">=0.6" }
